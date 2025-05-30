@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portafolio Andrés Covaleda</title>
+  <link rel="stylesheet" href="prueba.css" />
+</head>
+<body>
+
+  <!-- Barra de navegación superior -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="#info-personal">Información Personal</a></li>
+      <li><a href="#proyectos">Proyectos</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <!-- Sección principal del perfil -->
+  <header class="main-header">
+    <img src="./images/57_301_2562331_20250523_093000.webp" alt="Foto de perfil" class="main-img" />
+    <div class="main-info">
+      <h1>Andrés David Covaleda Vargas</h1>
+      <p>Desarrollador de Software</p>
+    </div>
+  </header>
+
+  <!-- Contenido en 2 columnas -->
+  <div class="container" style="display: flex; flex-wrap: wrap; gap: 20px;">
+
+    <!-- Columna lateral con datos personales -->
+    <div style="flex: 1 1 300px;" id="info-personal">
+      <div class="sidebar fade-in">
+        <h2>Sobre mí</h2>
+
+        <!-- Información académica -->
+        <div>
+          <h3>Estudios</h3>
+          <b>Bachillerato Académico</b><br>
+          <small>IEM Santiago Pérez<br>17 de Febrero de 2014 - 06 de Diciembre 2019</small><br><br>
+          <b>Ingeniería Mecatrónica</b><br>
+          <small>Escuela de Ingeniería de Antioquia<br>Desde el 20 de junio de 2020</small>
+        </div>
+
+        <!-- Logros -->
+        <div>
+          <h3>Logros</h3>
+          <ul>
+            <li>Nominación a líder de la comunidad</li>
+            <li>Rol de contralor en el bachillerato</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Columna principal con experiencia y proyectos -->
+    <div style="flex: 2 1 600px;">
+      <div class="box fade-in">
+        <h2>Perfil Profesional</h2>
+        <p>
+          Estudiante de séptimo semestre de Ingeniería Mecatrónica en la Universidad EIA. Apasionado por la inteligencia artificial y el desarrollo de tecnologías emergentes. Experiencia en análisis de datos, automatización y aprendizaje de máquina. Busco aplicar mis conocimientos en un entorno desafiante que me permita contribuir al desarrollo y mejora de modelos IA.
+        </p>
+
+        <h2>Habilidades</h2>
+        <ul>
+          <li>Modelado matemático, análisis numérico y sistemas de control.</li>
+          <li>Python, MATLAB, C++, JavaScript.</li>
+          <li>Sensores, actuadores, robótica y electrónica aplicada.</li>
+          <li>Español (nativo), Inglés (intermedio-avanzado).</li>
+        </ul>
+
+        <h2 id="proyectos">Proyectos</h2>
+
+        <!-- Tarjeta visual de proyectos -->
+        <div class="proyectos-grid">
+          <div class="box proyecto fade-in">
+            <img src="./images/control-inventario-erp-2.webp" alt="Imagen Proyecto 1" class="proyecto-img">
+            <h3>Sistema de manejo de inventario para tiendas</h3>
+            <p>Proyecto desarrollado en Python que permite añadir, actualizar, buscar y eliminar productos, calcular el valor total del inventario y validar las entradas del usuario. Ideal para controlar el stock de una tienda pequeña o mediana.</p>
+            <a href="https://github.com/Andrewshumeiker/prueba_desempe-o_m1/blob/main/README.md" class="proyecto-link" target="_blank">Ver en GitHub</a>
+          </div>
+
+          <div class="box proyecto fade-in">
+            <img src="./images/istockphoto-1265171600-612x612.jpg" alt="Imagen Proyecto 2" class="proyecto-img">
+            <h3>Sistema de manejo inventario para librería</h3>
+            <p>Aplicación interactiva que gestiona el inventario de libros. Incluye reportes, ordenamiento y funcionalidades orientadas a facilitar el manejo de insumos en una librería.</p>
+            <a href="https://github.com/Andrewshumeiker/tr4inig_s3_bibliotecary/blob/main/README.md" class="proyecto-link" target="_blank">Ver en GitHub</a>
+          </div>
+
+          <div class="box proyecto fade-in">
+            <img src="./images/concepto-plano-fondo-concepto-farmacia_23-2148216549.avif" alt="Imagen Proyecto 3" class="proyecto-img">
+            <h3>Regulación de Caducidad de Medicamentos - Módulo de Inventario</h3>
+            <p>Este módulo permite registrar medicamentos por lote con fecha de expiración, generar alertas automáticas por vencimiento próximo y validar su uso en tiempo real para evitar errores clínicos.</p>
+            <a href="https://github.com/Andrewshumeiker/sb1-9vj128ky/blob/main/README_Caducidad_Medicamentos.md" class="proyecto-link" target="_blank">Ver en GitHub</a>
+          </div>
+
+          <div class="box proyecto fade-in">
+            <img src="./images/PythonProjects11.png" alt="Imagen Proyecto 4" class="proyecto-img">
+            <h3>Proyectos de python</h3>
+            <p>Este repositorio es para mostrar los 10 ejercicios de Python que se colocaron en la semana 3, junto con estos hay un archivo README sobre el paradigma de programación orientada a objetos.</p>
+            <a href="https://github.com/Andrewshumeiker/python_exercise_s3/blob/main/README_exercises.md" class="proyecto-link" target="_blank">Ver en GitHub</a>
+          </div>
+        </div>
+
+        <h2 id="contacto">Contacto</h2>
+
+        <form action="https://formsubmit.co/andrescovaleda07@hotmail.com" method="POST" style="margin-bottom: 2em;">
+          <label for="name">Nombre:</label><br>
+          <input type="text" id="name" name="name" required style="width: 100%; padding: 8px; margin-bottom: 10px;" /><br>
+
+          <label for="email">Correo electrónico:</label><br>
+          <input type="email" id="email" name="email" required style="width: 100%; padding: 8px; margin-bottom: 10px;" /><br>
+
+          <label for="message">Mensaje:</label><br>
+          <textarea id="message" name="message" rows="5" required style="width: 100%; padding: 8px; margin-bottom: 10px;"></textarea><br>
+
+          <button type="submit" style="background-color: #6a1b9a; color: white; border: none; padding: 10px 20px; cursor: pointer; border-radius: 5px;">Enviar</button>
+        </form>
+
+        <p>
+          Teléfono: 3012562331<br />
+          Email: andrescovaleda07@hotmail.com
+        </p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+

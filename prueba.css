@@ -5,17 +5,17 @@
   box-sizing: border-box;
 }
 
-/* === CUERPO Y FUENTE === */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f3e5f5; /* lavanda suave */
-  color: #3e1f47;
+  background-color: #f3e5f5;
+  color: #c9c9c9;
   line-height: 1.6;
+  animation: fadeIn 1s ease-in forwards;
 }
 
 /* === BARRA DE NAVEGACIÓN === */
 .navbar {
-  background-color: #e4d1b8; /* morado oscuro */
+  background-color: #000;
   padding: 1em 2em;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
@@ -28,34 +28,39 @@ body {
 }
 
 .navbar a {
-  color: #050505;
+  color: #c4c4c4;
   text-decoration: none;
   font-weight: 600;
   transition: color 0.3s ease;
+  box-shadow: 0 2px #000;
 }
 
 .navbar a:hover {
-  color: #594f6b; /* lavanda claro */
+  color: #2c8a4e;
 }
 
 /* === ENCABEZADO PRINCIPAL === */
 .main-header {
-  background-color: #5a3f58; /* púrpura intermedio */
+  background-color: #000;
   color: white;
   text-align: center;
   padding: 15em 1em;
 }
 
+/* === IMAGEN CON FADE === */
 .main-img {
-  width: 150px;
-  height: 150px;
+  width: 250px;
+  height: 250px;
   border-radius: 50%;
   object-fit: cover;
-  border: 4px solid #f3e5f5;
+  border: 4px solid #edf5e5;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   margin-bottom: 1em;
+  opacity: 0;
+  animation: fadeIn 1.2s ease-out 0.3s forwards;
 }
 
+/* === INFO PRINCIPAL === */
 .main-info h1 {
   font-size: 2em;
 }
@@ -65,7 +70,7 @@ body {
   font-size: 1.1em;
 }
 
-/* === CONTENEDOR PRINCIPAL === */
+/* === CONTENEDOR GENERAL === */
 .container {
   max-width: 1100px;
   margin: auto;
@@ -75,13 +80,18 @@ body {
   gap: 2em;
 }
 
-/* === SECCIÓN LATERAL (INFORMACIÓN PERSONAL) === */
+/* === BARRA LATERAL === */
 .sidebar {
   flex: 1;
   min-width: 300px;
+  background: linear-gradient(to bottom, #000, #000);
+  border-radius: 12px;
+  padding: 1.5em;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  margin-bottom: 2em;
 }
 
-/* === SECCIÓN PRINCIPAL (DESCRIPCIÓN, PROYECTOS...) === */
+/* === CONTENIDO PRINCIPAL === */
 .main-content {
   flex: 2;
   min-width: 500px;
@@ -89,27 +99,27 @@ body {
 
 /* === CAJAS DE CONTENIDO === */
 .box {
-  background: linear-gradient(to bottom, #e4d1b8, #e4d1b8, #e4d1b8); /* degradado morado claro */
+  background: linear-gradient(to bottom, #131212, #000);
   border-radius: 12px;
   padding: 1.5em;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 5px 12px rgba(243, 243, 243, 0.15);
   margin-bottom: 2em;
 }
 
-/* === TÍTULOS Y SUBTÍTULOS === */
+/* === TÍTULOS === */
 h2 {
-  border-bottom: 2px solid #5a3f58;
+  border-bottom: 2px solid #fff;
   padding-bottom: 0.4em;
   margin-bottom: 1em;
-  color: #5a3f58;
+  color: #fff;
 }
 
 h3 {
-  color: #5a3f58;
+  color: #a6eba4;
   margin-top: 1.5em;
 }
 
-/* === LISTAS Y TEXTOS === */
+/* === LISTAS === */
 ul {
   padding-left: 1.5em;
 }
@@ -117,11 +127,19 @@ ul {
 li {
   margin-bottom: 0.5em;
 }
+
+/* === PROYECTOS === */
 .proyectos-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2em;
   margin-top: 1em;
+}
+
+.proyectos-grid .box {
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
+  animation-delay: 0.5s;
 }
 
 .proyecto-img {
@@ -146,16 +164,8 @@ li {
   transform: scale(1.05);
   color: #644870;
 }
-
-/* animacion*/
-.fade-in {
-  opacity: 0;
-  transform: translateY(30px);
-  animation: fadeInUp 0.8s ease forwards;
-  animation-delay: 0.2s;
-}
 .box form {
-  background-color: #72cdca;
+  background-color: #2c2c2c;
   padding: 20px;
   border-radius: 15px; / Redondea la caja completa /
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -187,9 +197,16 @@ li {
 .box button[type="submit"]:hover {
   background-color: #4a1270;
 }
-@keyframes fadeInUp {
+
+/* === ANIMACIONES === */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
+
